@@ -136,7 +136,7 @@ export default function RootLayout({
           {
             "@type": "HowToStep",
             name: "Paste Link in QLIP",
-            text: "Paste the URL into the QLIP search box on qlip-downloader.vercel.app and click 'Get Video'.",
+            text: "Paste the URL into the QLIP search box on qlip-downloader.vercel.app and click 'Download'.",
             position: 2,
           },
           {
@@ -155,7 +155,7 @@ export default function RootLayout({
             name: "How do I download TikTok videos without watermark?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Copy the link of the TikTok video from the TikTok app or browser, paste it into QLIP, and click 'Get Video'. QLIP automatically removes the TikTok watermark and gives you a direct link to the original Full HD MP4 file.",
+              text: "Copy the link of the TikTok video from the TikTok app or browser, paste it into QLIP, and click 'Download'. QLIP automatically removes the TikTok watermark and gives you a direct link to the original Full HD MP4 file.",
             },
           },
           {

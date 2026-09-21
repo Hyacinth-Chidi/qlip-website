@@ -9,7 +9,7 @@ export default function FaqSection() {
   const faqs = [
     {
       q: "How do I download TikTok videos without watermark?",
-      a: "Copy the link of the TikTok video from the TikTok app (by tapping Share -> Copy Link) or your browser. Paste the link into the QLIP search box above and click 'Get Video'. QLIP automatically removes the TikTok watermark and gives you a direct download link for the original Full HD MP4 file.",
+      a: "Copy the link of the TikTok video from the TikTok app (by tapping Share -> Copy Link) or your browser. Paste the link into the QLIP search box above and click 'Download'. QLIP automatically removes the TikTok watermark and gives you a direct download link for the original Full HD MP4 file.",
     },
     {
       q: "Can I download Instagram Reels, Stories and multi-slide Carousel photos?",

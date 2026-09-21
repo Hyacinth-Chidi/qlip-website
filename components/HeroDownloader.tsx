@@ -224,7 +224,7 @@ export default function HeroDownloader() {
               ) : (
                 <>
                   <Download className="h-4 w-4" />
-                  <span>Get Video</span>
+                  <span>Download</span>
                 </>
               )}
             </button>
