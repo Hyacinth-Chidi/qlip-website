@@ -26,7 +26,9 @@ export const metadata: Metadata = {
   creator: "QLIP",
   publisher: "QLIP",
   applicationName: "QLIP Web",
-  metadataBase: new URL("https://qlip.techfamz.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://qlip-downloader.vercel.app"
+  ),
   alternates: {
     canonical: "/",
   },
@@ -44,17 +46,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://qlip.techfamz.com",
+    url: "https://qlip-downloader.vercel.app",
     siteName: "QLIP Video Downloader",
     title: "QLIP — Free TikTok & Instagram Video Downloader Without Watermark",
     description:
       "Save TikTok videos without watermark and download Instagram Reels, Stories, and carousel photos in 1080p Full HD.",
     images: [
       {
-        url: "/appicon.png",
-        width: 1024,
-        height: 1024,
-        alt: "QLIP Video Downloader",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "QLIP — Free TikTok & Instagram Video Downloader Without Watermark",
       },
     ],
   },
@@ -63,7 +65,7 @@ export const metadata: Metadata = {
     title: "QLIP — Free TikTok & Instagram Video Downloader (No Watermark)",
     description:
       "Save TikTok videos without watermark and download Instagram Reels, Stories, and carousel photos in HD.",
-    images: ["/appicon.png"],
+    images: ["/og-image.png"],
     creator: "@qlipapp",
   },
   robots: {
@@ -89,25 +91,107 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "QLIP Video Downloader",
-    url: "https://qlip.techfamz.com",
-    applicationCategory: "MultimediaApplication",
-    operatingSystem: "All (Web, Android, iOS, Windows, Mac)",
-    description:
-      "Online video downloader tailored for TikTok without watermark, Instagram Reels, Stories, and Carousels in Full HD.",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
-    featureList: [
-      "TikTok Video Downloader Without Watermark",
-      "Instagram Reels and Stories Downloader",
-      "Multi-slide Carousel Photo Downloader",
-      "High-speed MP3 Audio Extraction",
-      "1080p Full HD Video Quality",
-      "All-Platform Video Support",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://qlip-downloader.vercel.app/#webapp",
+        name: "QLIP Video Downloader",
+        url: "https://qlip-downloader.vercel.app",
+        applicationCategory: "MultimediaApplication",
+        operatingSystem: "All (Web, Android, iOS, Windows, Mac)",
+        description:
+          "Online video downloader tailored for TikTok without watermark, Instagram Reels, Stories, and Carousels in Full HD.",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
+        featureList: [
+          "TikTok Video Downloader Without Watermark",
+          "Instagram Reels and Stories Downloader",
+          "Facebook Video Downloader",
+          "Instagram Video Downloader",
+          "YouTube Video Downloader",
+          "X Video Downloader",
+          "Pinterest Video Downloader",
+          "Vimeo Video Downloader",
+          "Multi-slide Carousel Photo Downloader",
+          "High-speed MP3 Audio Extraction",
+          "1080p Full HD Video Quality",
+          "All-Platform Video Support",
+        ],
+      },
+      {
+        "@type": "HowTo",
+        name: "How to Download TikTok Videos Without Watermark",
+        description:
+          "Step-by-step guide to download high-definition TikTok videos and Instagram Reels using QLIP.",
+        step: [
+          {
+            "@type": "HowToStep",
+            name: "Copy Video Link",
+            text: "Open TikTok or Instagram, find the video you want to save, tap Share, and copy the link.",
+            position: 1,
+          },
+          {
+            "@type": "HowToStep",
+            name: "Paste Link in QLIP",
+            text: "Paste the URL into the QLIP search box on qlip-downloader.vercel.app and click 'Get Video'.",
+            position: 2,
+          },
+          {
+            "@type": "HowToStep",
+            name: "Choose Quality and Download",
+            text: "Choose your preferred video resolution (1080p, 720p, or MP3 audio) and click download.",
+            position: 3,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How do I download TikTok videos without watermark?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Copy the link of the TikTok video from the TikTok app or browser, paste it into QLIP, and click 'Get Video'. QLIP automatically removes the TikTok watermark and gives you a direct link to the original Full HD MP4 file.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can I download Instagram Reels, Stories and multi-slide Carousel photos?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes! QLIP supports Instagram Reels, video posts, Stories, and multi-slide carousel photo galleries at original resolution.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Is QLIP 100% free? Do I need to create an account?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "QLIP is completely free with no limits and no account registration or passwords required.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Does QLIP support other platforms besides TikTok and Instagram?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes! QLIP also supports YouTube, Facebook Watch & Reels, X (Twitter), Pinterest, Vimeo, and over 100+ other video sites.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can I extract and download only the audio (MP3) from a video?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, when you fetch a video, QLIP provides an 'Audio Only' option to download the audio track in high-bitrate MP3 format.",
+            },
+          },
+        ],
+      },
     ],
   };
 

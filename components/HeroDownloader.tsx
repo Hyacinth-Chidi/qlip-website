@@ -183,7 +183,7 @@ export default function HeroDownloader() {
           QLIP is a Free video downloader. Download high-quality{" "}
           <strong className="text-slate-900 font-semibold">TikTok videos without watermarks</strong> and{" "}
           <strong className="text-slate-900 font-semibold">Instagram Reels, Stories & Carousel photos</strong>{" "}
-          — with instant support for ,Facebook, X, and more.
+          — with instant support for Facebook, X, and more.
         </p>
 
         {/* Centered Input Card */}
