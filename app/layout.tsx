@@ -31,8 +31,15 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/qliplogo.png",
-    apple: "/appicon.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/qliplogo.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     type: "website",
