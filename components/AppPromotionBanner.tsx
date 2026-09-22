@@ -38,7 +38,10 @@ export default function AppPromotionBanner() {
                 {/* Download Buttons */}
                 <div className="mt-6 flex flex-wrap items-center justify-center sm:justify-start gap-3">
                   <a
-                    href="#download"
+                    href="https://www.dropbox.com/scl/fi/ym6xyz7g0dp5us3xlgn2q/qlip.apk?rlkey=1r2qxayu504uv1vy9qk946svw&st=ieaqumgf&raw=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download="qlip.apk"
                     className="inline-flex items-center gap-2.5 rounded-xl bg-slate-900 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-black active:scale-95"
                   >
                     <Smartphone className="h-5 w-5 text-emerald-400" />

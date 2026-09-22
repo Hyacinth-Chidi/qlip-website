@@ -105,9 +105,15 @@ export default function Footer() {
             TikTok Audio MP3 Extractor
           </Link>
           <span>·</span>
-          <Link href="#mobile-app" className="hover:text-slate-800">
+          <a
+            href="https://www.dropbox.com/scl/fi/ym6xyz7g0dp5us3xlgn2q/qlip.apk?rlkey=1r2qxayu504uv1vy9qk946svw&st=ieaqumgf&raw=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="qlip.apk"
+            className="hover:text-slate-800"
+          >
             QLIP for Android APK
-          </Link>
+          </a>
         </div>
 
         {/* Copyright */}

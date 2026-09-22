@@ -79,7 +79,10 @@ export default function Navbar() {
         {/* Action Button */}
         <div className="flex items-center gap-3">
           <a
-            href="#mobile-app"
+            href="https://www.dropbox.com/scl/fi/ym6xyz7g0dp5us3xlgn2q/qlip.apk?rlkey=1r2qxayu504uv1vy9qk946svw&st=ieaqumgf&raw=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="qlip.apk"
             className="inline-flex items-center gap-2 rounded-full bg-[#0078F7] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#0063D1] hover:shadow-md active:scale-95"
           >
             <Smartphone className="h-4 w-4" />
@@ -147,7 +150,10 @@ export default function Navbar() {
               FAQ
             </Link>
             <a
-              href="#mobile-app"
+              href="https://www.dropbox.com/scl/fi/ym6xyz7g0dp5us3xlgn2q/qlip.apk?rlkey=1r2qxayu504uv1vy9qk946svw&st=ieaqumgf&raw=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="qlip.apk"
               onClick={() => setMobileMenuOpen(false)}
               className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-blue-50 px-4 py-2.5 font-semibold text-[#0078F7] border border-blue-200"
             >
