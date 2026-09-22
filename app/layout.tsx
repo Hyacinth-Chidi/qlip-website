@@ -32,9 +32,7 @@ export const metadata: Metadata = {
   creator: "QLIP",
   publisher: "QLIP",
   applicationName: "QLIP Web",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://qlip-downloader.vercel.app"
-  ),
+  metadataBase: new URL("https://qlip-downloader.vercel.app"),
   alternates: {
     canonical: "/",
   },
