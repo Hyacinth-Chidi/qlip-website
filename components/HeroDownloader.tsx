@@ -174,15 +174,16 @@ export default function HeroDownloader() {
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         {/* Main Headline (Strictly Center-Aligned) */}
         <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-[1.12] max-w-3xl">
-          Download TikTok{" "}
+          Download TikTok, Instagram & YouTube{" "}
           <span className="gradient-text-blue">Videos</span>
         </h1>
 
         {/* Subtitle (Strictly Center-Aligned) */}
         <p className="mt-5 max-w-2xl text-base text-slate-600 sm:text-lg leading-relaxed text-center">
-          QLIP is a Free video downloader. Download high-quality{" "}
-          <strong className="text-slate-900 font-semibold">TikTok videos without watermarks</strong> and{" "}
-          <strong className="text-slate-900 font-semibold">Instagram Reels, Stories & Carousel photos</strong>{" "}
+          QLIP is a free online video downloader. Save high-quality{" "}
+          <strong className="text-slate-900 font-semibold">TikTok videos without watermarks</strong>,{" "}
+          <strong className="text-slate-900 font-semibold">Instagram Reels, Stories & Carousel photos</strong>,{" "}
+          and <strong className="text-slate-900 font-semibold">YouTube videos in 1080p Full HD & MP3</strong>{" "}
           — with instant support for Facebook, X, and more.
         </p>
 

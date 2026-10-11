@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "QLIP — Free TikTok & Instagram Video Downloader (No Watermark, HD)",
+  title: "QLIP — Free TikTok, Instagram & YouTube Video Downloader (No Watermark, HD)",
   description:
-    "Download TikTok videos without watermark in Full HD 1080p and save Instagram Reels, Stories, audio MP3, and carousel photo galleries. 100% free, fast, and works with all major platforms.",
+    "Download TikTok videos without watermark in Full HD 1080p, save Instagram Reels, Stories & carousels, and download YouTube videos & MP3 audio. 100% free and fast.",
   keywords: [
     "TikTok video downloader",
     "qlip downloader",
@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     "TikTok downloader without watermark",
     "Instagram reels downloader",
     "Instagram video saver",
+    "YouTube video downloader",
+    "YouTube to MP3",
+    "YouTube Shorts downloader",
+    "Facebook video downloader",
+    "Twitter X video downloader",
     "download Instagram carousel photos",
     "Video Downloader",
     "Video Saver",
@@ -52,23 +57,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://qlip-downloader.vercel.app",
     siteName: "QLIP Video Downloader",
-    title: "QLIP — Free TikTok & Instagram Video Downloader Without Watermark",
+    title: "QLIP — Free TikTok, Instagram & YouTube Video Downloader Without Watermark",
     description:
-      "Save TikTok videos without watermark and download Instagram Reels, Stories, and carousel photos in 1080p Full HD.",
+      "Save TikTok videos without watermark, download Instagram Reels, Stories, and carousel photos, and download YouTube videos in 1080p Full HD & MP3.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "QLIP — Free TikTok & Instagram Video Downloader Without Watermark",
+        alt: "QLIP — Free TikTok, Instagram & YouTube Video Downloader",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "QLIP — Free TikTok & Instagram Video Downloader (No Watermark)",
+    title: "QLIP — Free TikTok, Instagram & YouTube Video Downloader (No Watermark)",
     description:
-      "Save TikTok videos without watermark and download Instagram Reels, Stories, and carousel photos in HD.",
+      "Save TikTok videos without watermark, Instagram Reels & Stories, and YouTube videos in HD & MP3.",
     images: ["/og-image.png"],
     creator: "@qlipapp",
   },

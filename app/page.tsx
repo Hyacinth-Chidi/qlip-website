@@ -18,6 +18,7 @@ export default function Home() {
         <HeroDownloader />
 
         {/* 4 Feature Cards Row */}
+        <FeatureHighlights />
 
 
         {/* Supported Platforms + 3 Steps + SEO Deep Dive Cards */}
