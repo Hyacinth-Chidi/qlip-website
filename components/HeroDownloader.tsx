@@ -109,17 +109,38 @@ export default function HeroDownloader() {
     }
   };
 
-  const handleDownload = (formatId: string, itemIndex?: number) => {
+  const cleanFilename = (rawName?: string, fallback = "qlip-video") => {
+    if (!rawName) return fallback;
+    const cleaned = rawName
+      .replace(/[/\\?%*:|"<>]/g, "")
+      .replace(/[\r\n\t]/g, " ")
+      .trim()
+      .slice(0, 100);
+    return cleaned || fallback;
+  };
+
+  const handleDownload = (
+    formatId: string,
+    options?: { itemIndex?: number; name?: string; ext?: string }
+  ) => {
     setDownloadingFormat(formatId);
     const params = new URLSearchParams({ url: url.trim(), format: formatId });
-    if (itemIndex !== undefined) {
-      params.set("item", String(itemIndex));
+    if (options?.itemIndex !== undefined) {
+      params.set("item", String(options.itemIndex));
+    }
+    const safeName = cleanFilename(options?.name);
+    params.set("name", safeName);
+    if (options?.ext) {
+      params.set("ext", options.ext);
     }
     const downloadUrl = `${API_BASE_URL}/api/download?${params.toString()}`;
 
     const a = document.createElement("a");
     a.href = downloadUrl;
-    a.setAttribute("download", "");
+    a.setAttribute(
+      "download",
+      options?.ext ? `${safeName}.${options.ext}` : safeName
+    );
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -280,7 +301,12 @@ export default function HeroDownloader() {
                       <button
                         key={q.id}
                         type="button"
-                        onClick={() => handleDownload(q.id)}
+                        onClick={() =>
+                          handleDownload(q.id, {
+                            name: result.title,
+                            ext: q.ext,
+                          })
+                        }
                         disabled={downloadingFormat === q.id}
                         className={`inline-flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-xs font-bold transition active:scale-95 ${
                           q.kind === "audio"
@@ -339,7 +365,13 @@ export default function HeroDownloader() {
                         <button
                           type="button"
                           onClick={() =>
-                            handleDownload(item.qualities[0]?.id || "", item.index)
+                            handleDownload(item.qualities[0]?.id || "", {
+                              itemIndex: item.index,
+                              name: `${result.title || "qlip"}_${item.index}`,
+                              ext:
+                                item.qualities[0]?.ext ||
+                                (item.kind === "video" ? "mp4" : "jpg"),
+                            })
                           }
                           className="rounded bg-[#0078F7] p-1 text-white hover:bg-[#0063D1]"
                           title="Download this item"
