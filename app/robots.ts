@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://qlip-downloader.vercel.app";
+  const baseUrl = "https://qlip.techfamz.com";
 
   return {
     rules: [

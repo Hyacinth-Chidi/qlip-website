@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   creator: "QLIP",
   publisher: "QLIP",
   applicationName: "QLIP Web",
-  metadataBase: new URL("https://qlip-downloader.vercel.app"),
+  metadataBase: new URL("https://qlip.techfamz.com"),
   alternates: {
     canonical: "/",
   },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://qlip-downloader.vercel.app",
+    url: "https://qlip.techfamz.com",
     siteName: "QLIP Video Downloader",
     title: "QLIP — Free TikTok, Instagram & YouTube Video Downloader Without Watermark",
     description:
@@ -103,9 +103,9 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://qlip-downloader.vercel.app/#webapp",
+        "@id": "https://qlip.techfamz.com/#webapp",
         name: "QLIP Video Downloader",
-        url: "https://qlip-downloader.vercel.app",
+        url: "https://qlip.techfamz.com",
         applicationCategory: "MultimediaApplication",
         operatingSystem: "All (Web, Android, iOS, Windows, Mac)",
         description:
@@ -146,7 +146,7 @@ export default function RootLayout({
           {
             "@type": "HowToStep",
             name: "Paste Link in QLIP",
-            text: "Paste the URL into the QLIP search box on qlip-downloader.vercel.app and click 'Download'.",
+            text: "Paste the URL into the QLIP search box on qlip.techfamz.com and click 'Download'.",
             position: 2,
           },
           {

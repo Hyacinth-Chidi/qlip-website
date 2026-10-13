@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://qlip-downloader.vercel.app";
+  const baseUrl = "https://qlip.techfamz.com";
 
   return [
     {
