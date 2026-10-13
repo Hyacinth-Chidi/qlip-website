@@ -32,11 +32,17 @@ export default function Footer() {
             <Link href="#features" className="hover:text-[#0078F7] transition">
               Features
             </Link>
-            <Link href="#tiktok" className="hover:text-[#0078F7] transition">
+            <Link href="/tiktok-downloader" className="hover:text-[#0078F7] transition">
               TikTok Downloader
             </Link>
-            <Link href="#instagram" className="hover:text-[#0078F7] transition">
+            <Link href="/instagram-downloader" className="hover:text-[#0078F7] transition">
               Instagram Downloader
+            </Link>
+            <Link href="/youtube-downloader" className="hover:text-[#0078F7] transition">
+              YouTube Downloader
+            </Link>
+            <Link href="/twitter-downloader" className="hover:text-[#0078F7] transition">
+              Twitter (X) Downloader
             </Link>
             <Link href="#how-it-works" className="hover:text-[#0078F7] transition">
               How It Works

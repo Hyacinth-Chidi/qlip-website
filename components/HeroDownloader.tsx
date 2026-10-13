@@ -50,7 +50,17 @@ type ExtractResult = SingleExtractResult | MultiExtractResult;
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL || "https://qlip-api.techfamz.com";
 
-export default function HeroDownloader() {
+export interface HeroDownloaderProps {
+  heading?: React.ReactNode;
+  subtitle?: React.ReactNode;
+  placeholder?: string;
+}
+
+export default function HeroDownloader({
+  heading,
+  subtitle,
+  placeholder,
+}: HeroDownloaderProps = {}) {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -195,18 +205,26 @@ export default function HeroDownloader() {
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         {/* Main Headline (Strictly Center-Aligned) */}
         <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-[1.12] max-w-3xl">
-          Download TikTok, Instagram & YouTube{" "}
-          <span className="gradient-text-blue">Videos</span>
+          {heading || (
+            <>
+              Download TikTok, Instagram & YouTube{" "}
+              <span className="gradient-text-blue">Videos</span>
+            </>
+          )}
         </h1>
 
         {/* Subtitle (Strictly Center-Aligned) */}
-        <p className="mt-5 max-w-2xl text-base text-slate-600 sm:text-lg leading-relaxed text-center">
-          QLIP is a free online video downloader. Save high-quality{" "}
-          <strong className="text-slate-900 font-semibold">TikTok videos without watermarks</strong>,{" "}
-          <strong className="text-slate-900 font-semibold">Instagram Reels, Stories & Carousel photos</strong>,{" "}
-          and <strong className="text-slate-900 font-semibold">YouTube videos in 1080p Full HD & MP3</strong>{" "}
-          — with instant support for Facebook, X, and more.
-        </p>
+        <div className="mt-5 max-w-2xl text-base text-slate-600 sm:text-lg leading-relaxed text-center">
+          {subtitle || (
+            <p>
+              QLIP is a free online video downloader. Save high-quality{" "}
+              <strong className="text-slate-900 font-semibold">TikTok videos without watermarks</strong>,{" "}
+              <strong className="text-slate-900 font-semibold">Instagram Reels, Stories & Carousel photos</strong>,{" "}
+              and <strong className="text-slate-900 font-semibold">YouTube videos in 1080p Full HD & MP3</strong>{" "}
+              — with instant support for Facebook, X, and more.
+            </p>
+          )}
+        </div>
 
         {/* Centered Input Card */}
         <div className="mt-8 w-full max-w-2xl">
@@ -227,7 +245,7 @@ export default function HeroDownloader() {
                 type="url"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                placeholder="Paste video link here..."
+                placeholder={placeholder || "Paste video link here..."}
                 className="w-full bg-transparent text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none sm:text-base"
                 required
               />

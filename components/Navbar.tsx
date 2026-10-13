@@ -39,22 +39,40 @@ export default function Navbar() {
             Home
           </Link>
           <Link
-            href="#tiktok"
+            href="/tiktok-downloader"
             className="group flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-black"
           >
             <span className="relative h-4 w-4">
               <Image src="/icons/tiktok.svg" alt="TikTok" width={16} height={16} />
             </span>
-            <span>TikTok Downloader</span>
+            <span>TikTok</span>
           </Link>
           <Link
-            href="#instagram"
+            href="/instagram-downloader"
             className="group flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-[#E1306C]"
           >
             <span className="relative h-4 w-4">
               <Image src="/icons/instagram.svg" alt="Instagram" width={16} height={16} />
             </span>
-            <span>Instagram Downloader</span>
+            <span>Instagram</span>
+          </Link>
+          <Link
+            href="/youtube-downloader"
+            className="group flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-[#FF0000]"
+          >
+            <span className="relative h-4 w-4">
+              <Image src="/icons/youtube.svg" alt="YouTube" width={16} height={16} />
+            </span>
+            <span>YouTube</span>
+          </Link>
+          <Link
+            href="/twitter-downloader"
+            className="group flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-black"
+          >
+            <span className="relative h-4 w-4">
+              <Image src="/icons/x.svg" alt="X" width={16} height={16} />
+            </span>
+            <span>Twitter (X)</span>
           </Link>
           <Link
             href="#features"
@@ -113,20 +131,36 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="#tiktok"
+              href="/tiktok-downloader"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center gap-2 rounded-lg px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-100"
             >
               <Image src="/icons/tiktok.svg" alt="TikTok" width={18} height={18} />
-              <span>TikTok Video Downloader</span>
+              <span>TikTok Downloader</span>
             </Link>
             <Link
-              href="#instagram"
+              href="/instagram-downloader"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center gap-2 rounded-lg px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-100 text-[#E1306C]"
             >
               <Image src="/icons/instagram.svg" alt="Instagram" width={18} height={18} />
-              <span>Instagram Reels & Stories</span>
+              <span>Instagram Downloader</span>
+            </Link>
+            <Link
+              href="/youtube-downloader"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-2 rounded-lg px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-100 text-[#FF0000]"
+            >
+              <Image src="/icons/youtube.svg" alt="YouTube" width={18} height={18} />
+              <span>YouTube Downloader</span>
+            </Link>
+            <Link
+              href="/twitter-downloader"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-2 rounded-lg px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-100 text-black"
+            >
+              <Image src="/icons/x.svg" alt="X" width={18} height={18} />
+              <span>Twitter (X) Downloader</span>
             </Link>
             <Link
               href="#features"
