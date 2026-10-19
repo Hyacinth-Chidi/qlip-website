@@ -20,6 +20,24 @@ export const metadata: Metadata = {
     description:
       "Download X (Twitter) videos and animated GIFs in original high resolution with sound in seconds.",
     url: "https://qlip.techfamz.com/twitter-downloader",
+    // A page-level openGraph block replaces the root one outright rather than
+    // merging, so the shared image has to be restated or the page ships with
+    // no preview image at all.
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "QLIP — Twitter (X) Video Downloader",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Twitter (X) Video Downloader — Fast & Free HD MP4 | QLIP",
+    description:
+      "Download X (Twitter) videos and animated GIFs in original high resolution with sound in seconds.",
+    images: ["/og-image.png"],
   },
 };
 

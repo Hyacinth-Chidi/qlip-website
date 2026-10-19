@@ -19,6 +19,24 @@ export const metadata: Metadata = {
     description:
       "Save Instagram Reels, IGTV, and carousel albums in full resolution with audio intact.",
     url: "https://qlip.techfamz.com/instagram-downloader",
+    // A page-level openGraph block replaces the root one outright rather than
+    // merging, so the shared image has to be restated or the page ships with
+    // no preview image at all.
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "QLIP — Instagram Reels & Video Downloader",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Instagram Reels & Video Downloader — Fast & Free 1080p | QLIP",
+    description:
+      "Save Instagram Reels, IGTV, and carousel albums in full resolution with audio intact.",
+    images: ["/og-image.png"],
   },
 };
 

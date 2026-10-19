@@ -19,6 +19,24 @@ export const metadata: Metadata = {
     description:
       "Save TikTok clips, slideshows, and audio tracks in crisp HD without watermark in seconds.",
     url: "https://qlip.techfamz.com/tiktok-downloader",
+    // A page-level openGraph block replaces the root one outright rather than
+    // merging, so the shared image has to be restated or the page ships with
+    // no preview image at all.
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "QLIP — TikTok Video Downloader Without Watermark",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TikTok Video Downloader Without Watermark — Fast & Free | QLIP",
+    description:
+      "Save TikTok clips, slideshows, and audio tracks in crisp HD without watermark in seconds.",
+    images: ["/og-image.png"],
   },
 };
 

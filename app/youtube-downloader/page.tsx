@@ -20,6 +20,24 @@ export const metadata: Metadata = {
     description:
       "Save YouTube videos, Shorts clips, and convert YouTube to MP3 audio in seconds without software.",
     url: "https://qlip.techfamz.com/youtube-downloader",
+    // A page-level openGraph block replaces the root one outright rather than
+    // merging, so the shared image has to be restated or the page ships with
+    // no preview image at all.
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "QLIP — YouTube Video & Shorts Downloader",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "YouTube Video & Shorts Downloader — Fast & Free 1080p/4K | QLIP",
+    description:
+      "Save YouTube videos, Shorts clips, and convert YouTube to MP3 audio in seconds without software.",
+    images: ["/og-image.png"],
   },
 };
 
