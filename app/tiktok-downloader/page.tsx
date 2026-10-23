@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroDownloader from "@/components/HeroDownloader";
+import AdsterraNativeBanner from "@/components/AdsterraNativeBanner";
 import FeatureHighlights from "@/components/FeatureHighlights";
 import AppPromotionBanner from "@/components/AppPromotionBanner";
 import Footer from "@/components/Footer";
@@ -110,6 +111,11 @@ export default function TikTokDownloaderPage() {
           }
           placeholder="Paste TikTok link here (e.g. https://vt.tiktok.com/...)"
         />
+
+        {/* Adsterra Native Banner */}
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <AdsterraNativeBanner />
+        </div>
 
         <FeatureHighlights />
 

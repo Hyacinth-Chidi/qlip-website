@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -215,6 +216,19 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-900 antialiased font-sans">
         {children}
+
+        {/* Adsterra Popunder */}
+        <Script
+          src="https://pl31981386.profitableratecpmnetwork.com/3f/f6/02/3ff602802b37512af4d48464baa55c27.js"
+          strategy="afterInteractive"
+        />
+
+        {/* Adsterra Social Bar */}
+        <Script
+          src="https://bellnewyork.org/14/02f2671e4c705a364231d9e8d6a7a085"
+          strategy="afterInteractive"
+          data-cfasync="false"
+        />
       </body>
     </html>
   );

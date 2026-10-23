@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import HeroDownloader from "@/components/HeroDownloader";
+import AdsterraNativeBanner from "@/components/AdsterraNativeBanner";
 import FeatureHighlights from "@/components/FeatureHighlights";
 import AppPromotionBanner from "@/components/AppPromotionBanner";
 import Footer from "@/components/Footer";
@@ -111,6 +112,11 @@ export default function YouTubeDownloaderPage() {
           }
           placeholder="Paste YouTube link here (e.g. https://youtu.be/...)"
         />
+
+        {/* Adsterra Native Banner */}
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <AdsterraNativeBanner />
+        </div>
 
         <FeatureHighlights />
 
