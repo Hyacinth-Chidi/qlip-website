@@ -18,7 +18,17 @@ if ! command -v pm2 >/dev/null 2>&1; then
 fi
 
 echo "==> [qlip-web] Starting/reloading qlip-web under PM2"
-pm2 startOrReload ecosystem.config.cjs
+# `startOrReload` reloads a running app from PM2's *saved* definition rather
+# than re-reading this file, so a stale definition survives every deploy. One
+# such definition ran `next start 3000`, which Next reads as a project
+# directory and not a port ("Invalid project directory ... /3000") — it
+# crash-looped and served nginx a 502 while PM2 still reported "online".
+# Deleting first forces the ecosystem file to be the single source of truth.
+pm2 delete qlip-web >/dev/null 2>&1 || true
+pm2 start ecosystem.config.cjs
+
+# Persist, or the PM2 daemon resurrects the previous definition on reboot.
+pm2 save >/dev/null
 
 echo "==> [qlip-web] Successfully deployed! Process status:"
 pm2 status qlip-web
